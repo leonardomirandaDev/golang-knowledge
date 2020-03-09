@@ -11,6 +11,8 @@ func main() {
 	result := sumFloat(number1, number2)
 	// print with some args
 	fmt.Println("Sum of two numbers: ",number1," + ",number2," = ", result)
+	// Print Variable type
+	fmt.Printf("Result is %T\n", result)
 }
 
 func welcome() {
@@ -20,4 +22,3 @@ func welcome() {
 func sumFloat(x float64, y float64) float64 {
 	return x + y
 }
-
