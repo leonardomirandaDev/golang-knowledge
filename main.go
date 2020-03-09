@@ -4,6 +4,9 @@ import "fmt"
 
 func main() {
 	welcome()
+	fmt.Println("-------")
+
+
 	// declaration typed variable
 	var number1 float64 = 3.2
 	var number2 float64 = 2
@@ -16,6 +19,8 @@ func main() {
 	// compare with if's
 	biggerThan(result, 3)
 
+
+
 	fmt.Println("-------")
 	// for example
 	var factorial int = getFactorial(6);
@@ -24,8 +29,7 @@ func main() {
 }
 
 func welcome() {
-	fmt.Println("Welcome to my first Code on Golang:")
-	fmt.Println("-------")
+	fmt.Println("Welcome to my first Code on Golang")
 }
 
 func sumFloat(x float64, y float64) float64 {
