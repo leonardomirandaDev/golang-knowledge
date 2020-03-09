@@ -12,7 +12,10 @@ func main() {
 	// print with some args
 	fmt.Println("Sum of two numbers: ",number1," + ",number2," = ", result)
 	// Print Variable type
-	fmt.Printf("Result is %T\n", result)
+	fmt.Printf("Type result is %T\n", result)
+
+	biggerThan(result, 3)
+	
 }
 
 func welcome() {
@@ -21,4 +24,12 @@ func welcome() {
 
 func sumFloat(x float64, y float64) float64 {
 	return x + y
+}
+
+func biggerThan(x float64, limit float64) {
+	if (x > limit) {
+		fmt.Println("It's bigger than ", limit)
+	} else {
+		fmt.Println("It's not bigger than ", limit)
+	}
 }
