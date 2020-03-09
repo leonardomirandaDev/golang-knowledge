@@ -1,6 +1,9 @@
 package main
 
-import "fmt" 
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
 	welcome()
@@ -25,6 +28,13 @@ func main() {
 	// for example
 	var factorial int = getFactorial(6);
 	fmt.Println("(6)! = ",factorial)
+	
+	
+	
+	fmt.Println("-------")
+	// for example
+	resultSquare := math.Sqrt(25);
+	fmt.Println("square root of 25 = ", resultSquare)
 	
 }
 
