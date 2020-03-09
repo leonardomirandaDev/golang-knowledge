@@ -13,13 +13,19 @@ func main() {
 	fmt.Println("Sum of two numbers: ",number1," + ",number2," = ", result)
 	// Print Variable type
 	fmt.Printf("Type result is %T\n", result)
-
+	// compare with if's
 	biggerThan(result, 3)
+
+	fmt.Println("-------")
+	// for example
+	var factorial int = getFactorial(6);
+	fmt.Println("(6)! = ",factorial)
 	
 }
 
 func welcome() {
 	fmt.Println("Welcome to my first Code on Golang:")
+	fmt.Println("-------")
 }
 
 func sumFloat(x float64, y float64) float64 {
@@ -32,4 +38,12 @@ func biggerThan(x float64, limit float64) {
 	} else {
 		fmt.Println("It's not bigger than ", limit)
 	}
+}
+
+func getFactorial(factor int) int {
+	var result int = 1
+	for i := factor; i > 0; i-- {
+		result = result * i
+	}
+	return result
 }
