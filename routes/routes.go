@@ -1,9 +1,8 @@
-package main
+package routes
 
 import (
 	"encoding/json"
 	"fmt"
-	"log"
 	"net/http"
 )
 
@@ -15,7 +14,7 @@ type Article struct {
 
 type Articles []Article
 
-func allArticles(w http.ResponseWriter, r *http.Request) {
+func AllArticles(w http.ResponseWriter, r *http.Request) {
 	articles := Articles{
 		Article{
 			Title:   "Title 1",
@@ -39,17 +38,7 @@ func allArticles(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(articles)
 }
 
-func homePage(w http.ResponseWriter, r *http.Request) {
+func HomePage(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Homepage endpoint Hit")
 	json.NewEncoder(w).Encode("Hello World")
-}
-
-func handleRequests() {
-	http.HandleFunc("/", homePage)
-	http.HandleFunc("/articles", allArticles)
-	log.Fatal(http.ListenAndServe(":8000", nil))
-}
-
-func main() {
-	handleRequests()
 }
