@@ -1,4 +1,4 @@
-package map
+package main
 
 import "fmt"
 
@@ -9,15 +9,13 @@ func main() {
 	notas["leo"] = 9
 
 	fmt.Println(notas)
-	
-	
+
 	// map literal ---------
-	
+
 	notas2 := map[string]int{
 		"nico": 7,
-		"leo": 6,
+		"leo":  6,
 	}
-
 
 	fmt.Println(notas2)
 }
